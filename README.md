@@ -14,11 +14,11 @@ Hecho con: ![](https://img.shields.io/badge/React%20JS%20-0891b2) ![](https://im
 ----
 ## 📝 Instalación
 
-####Instalar npm
+#### Instalar npm
 
 `$ npm install`
 
-####Ejecutar la aplicación
+#### Ejecutar la aplicación
 
 `<$ npm run dev>`
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import {get} from "../utils/conexionAPI.js"
 import { useParams } from "react-router-dom"
 import {Header} from "../components/Header.jsx"
+import {Contador} from "../components/Contador.jsx"
 import "./DetallePeliculas.css"
 
 export const DetallePeliculas = () => {
@@ -22,24 +23,29 @@ export const DetallePeliculas = () => {
     return null
    }
 
-   const imgURL = `https://image.tmdb.org/t/p/w300${pelicula.poster_path}`;
+   const imgURL = `https://image.tmdb.org/t/p/w300${pelicula.poster_path}`;   
 
    return(
     <>
     <Header/>
     <div className="contenedorPelicula">
-        <img src={imgURL} alt={pelicula.title} className="ImgPelicula"/>
-        <div className="detallePelicula">
-            <h3>Titulo: {pelicula.title}</h3> 
-            <p>
-                <strong>Generos: </strong>{pelicula.genres.map((genre)=>genre.name).join("  -  ")} 
-            </p>
-            <p>
-                <strong>Descripción: </strong>{pelicula.overview}
-            </p>
+        <div>
+            <img src={imgURL} alt={pelicula.title} className="ImgPelicula"/>
         </div>
-    
+        <div>
+            <div className="detallePelicula">
+                <h3>Titulo: {pelicula.title}</h3> 
+                <p>
+                    <strong>Generos: </strong>{pelicula.genres.map((genre)=>genre.name).join("  -  ")} 
+                </p>
+                <p>
+                    <strong>Descripción: </strong>{pelicula.overview}
+                </p>
+            </div> 
+            <Contador /> 
+        </div>
     </div>
+
     </>
 
    )
