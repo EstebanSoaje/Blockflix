@@ -1,0 +1,36 @@
+.item-carrito {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .imagen {
+    width: 150px;
+    border-radius: 20px;
+    margin-right: 20px;
+  }
+  
+  .descripcion {
+    flex: 3;
+  }
+  
+  .contador {
+    display: flex;
+    align-items: center;
+  }
+  
+  .precio {
+    flex: 1;
+    text-align: right;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+  }
+  

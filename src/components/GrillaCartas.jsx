@@ -4,9 +4,8 @@ import {Carta} from "./Carta.jsx"
 import "./GrillaCartas.css"
 
 export const GrillaCartas = () => {
-
     const [peliculas,setPeliculas]= useState([])
-
+   
     useEffect(()=>{
         get("/discover/movie")
         .then((data)=>{
@@ -22,7 +21,7 @@ export const GrillaCartas = () => {
     return (
         <ul className="grillaCartas">
             {peliculas.map((pelicula)=>(
-                <Carta key={pelicula.id} peliculaMap={pelicula}/>
+                <Carta key={pelicula.id} peliculaMap={pelicula} />
             ))}
         </ul>
     )

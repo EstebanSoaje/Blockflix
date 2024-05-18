@@ -6,7 +6,6 @@
     border-radius: 15px;
     overflow: hidden;
     position: relative;
-    margin: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.616);
     display: flex;
     flex-direction: column;
@@ -16,36 +15,19 @@
 .carta img {
     display: flex;
     width: 100%;
-    height: auto;
-}
-
-/* Estilos para la calificación */
-.carta .rating {
-    position: absolute;
-    bottom: 2px;
-    left: 2px;
-    background-color: green;
-    color: white;
-    padding: 5px;
-    border-radius: 45%;
-}
+    }
 
 /* Estilos para la información de la película */
 .carta .info {
     gap: 10px;
-    padding: 10px;
     text-align: center;
-    min-height: 150px;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.297);
 }
 
-.contador {
- width: 100%;
- position: relative;
- text-align: center;
-margin: auto;
-}
-button{
+.boton{
     background-color: #171227;
-    border-radius: 20%;
+    border-style: double;
+    border-radius: 20px;
 }

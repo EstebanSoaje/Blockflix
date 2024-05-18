@@ -3,13 +3,14 @@ import {LandingPage} from './pages/LandingPage.jsx'
 import {DetallePeliculas} from "./pages/DetallePeliculas.jsx"
 import {Carrito} from "./pages/Carrito.jsx"
 import {Login} from "./pages/Login.jsx"
+import {CartProvider} from "./Context/CartContext.jsx"
 
 import "./App.css"
 
-const App = () => {
+export const App = () => {
 
   return(
-  <>
+  <CartProvider>
     <BrowserRouter> 
      {/* <ul className="listaVinculos">
       <li><Link to = "/"><p>Ir al Landing Page</p></Link></li>
@@ -23,8 +24,6 @@ const App = () => {
         <Route path = "/login" element = {<Login/>}/>
       </Routes>
     </BrowserRouter>
-  </>
+  </CartProvider>
   )
 }
-
-export default App

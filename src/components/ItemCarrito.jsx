@@ -1,39 +1,32 @@
+import { useState, useEffect } from "react"
 import React from 'react';
+import './ItemCarrito.css';
+import { Carta } from "./Carta";
 
 
-export const ItemCarrito = ({peliculaMap}) => {
+export const ItemCarrito = ({ peliculaMap }) => {
+  const imgURL = `https://image.tmdb.org/t/p/w300${peliculaMap.poster_path}`
+  var [count, setCount] = useState(1);
+  const total = 500 * count
+  
 
-    const [peliculas,setPeliculas]= useState([])
-    useEffect(()=>{
-        get("/discover/movie")
-        .then((data)=>{
-            // console.log(data);
-            setPeliculas(data.results)
-        })
-        .catch((error) => {
-            console.error("Error recuperando películas:", error);
-            // Manejar el error de forma adecuada, por ejemplo mostrando un mensaje de error al usuario
-        });
-    },[])
 
-  return (
-    <div className="item-carrito">
-      <div className="imagen">
-        <img src={imagen} alt="Producto" />
-      </div>
-      <div className="descripcion">
-        <p>{peliculaMap.title}</p>
-        <div className="contador">
-          <button>-</button>
-          <span>{cantidad}</span>
-          <button>+</button>
-        </div>
-      </div>
-      <div className="precio">
-        <span>${precio}</span>
-        <button onClick={onEliminar}>Eliminar</button>
-      </div>
-    </div>
-  );
-};
-
+    
+      return (
+        <li className="item-carrito">
+                <img className="imagen" src={imgURL} alt={peliculaMap.title} />
+            
+            <div className="info">
+                <h4>{peliculaMap.title}</h4>
+           
+            <p>
+               <button className="boton" onClick={() => restarDia()}>-</button>
+                 Alquilar por {count} días
+              <button className="boton" onClick={() => sumarDia()}>+</button>
+            </p>
+            <p>${total}</p>
+            <button className="boton" onClick={() => <Carta eliminarDelCarrito/> }>Eliminar</button>
+            </div>
+            
+        </li>
+      );};

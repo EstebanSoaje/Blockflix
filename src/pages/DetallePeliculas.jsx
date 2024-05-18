@@ -37,8 +37,9 @@ export const DetallePeliculas = () => {
             <p>
                 <strong>Descripción: </strong>{pelicula.overview}
             </p>
+            <button onClick={() => console.log(pelicula)}>Agregar al carrito</button>
         </div>
-    
+        
     </div>
     </>
 
