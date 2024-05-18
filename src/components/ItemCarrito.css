@@ -27,10 +27,17 @@
   }
   
   button {
-    background-color: transparent;
+    background-color: rgb(124, 124, 124);
     border: none;
     cursor: pointer;
     font-size: 14px;
-    margin: 0 5px;
+    padding: 15px;
+    border-radius: 5px;
+    margin: auto;
   }
   
+  
+  button :hover{
+    background-color: rgb(152, 11, 11);
+
+  }

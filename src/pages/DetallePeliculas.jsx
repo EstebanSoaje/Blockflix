@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import {get} from "../utils/conexionAPI.js"
 import { useParams } from "react-router-dom"
 import {Header} from "../components/Header.jsx"
 import "./DetallePeliculas.css"
+import {CartContext} from "../Context/CartContext.jsx"
 
 export const DetallePeliculas = () => {
-   
+   const { addItemToCart } = useContext(CartContext)
     const [pelicula,setPelicula]= useState (null)
     const {peliculaId} = useParams();
 
@@ -37,7 +38,7 @@ export const DetallePeliculas = () => {
             <p>
                 <strong>Descripción: </strong>{pelicula.overview}
             </p>
-            <button onClick={() => console.log(pelicula)}>Agregar al carrito</button>
+            <button onClick={() => addItemToCart(pelicula)}>Agregar al carrito</button>
         </div>
         
     </div>
