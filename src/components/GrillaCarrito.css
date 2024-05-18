@@ -1,0 +1,33 @@
+.carrito{
+    width: 100%;
+    font-size: larger;
+}
+
+.alquilar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 500px;
+}
+
+.alquilar button{
+    font-size: x-large;
+}
+
+.carritoVacio{
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+@media (max-width:800px){
+    .alquilar{
+        margin-left: 10%;
+        max-width: 100%;
+    }
+    .total{
+        margin-right: 5%;
+    }
+}

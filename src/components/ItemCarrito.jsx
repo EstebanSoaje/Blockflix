@@ -22,22 +22,22 @@ export const ItemCarrito = ({ peliculaMap }) => {
 
   return (
     <>
-      <div className="itemCarrito">
-
-        <img src={imgURL} alt={peliculaMap.title} />
-
-        <div className="datosItem">
-          <div className="izquierda">
-            <p>{peliculaMap.title}</p>
-            
-            <button onClick={() => deleteItemToCart(peliculaMap)}>Sacar del carrito</button>
+      <div className="item">
+        <div className="izquierda">
+          <img className="imagen"src={imgURL} alt={peliculaMap.title} />
+        </div>
+        <div className="derecha">
+          <div className="datosItem">
+            <h2 className="titulo">{peliculaMap.title}</h2>
+            <div className="contador">
+              <button className="signo" onClick={decrement}>➖</button>
+              <strong>{count} Día/as</strong>
+              <button className="signo" onClick={increment}>➕</button>
+              <button onClick={() => deleteItemToCart(peliculaMap)}>Quitar ❌</button>
+            </div>
+            <br/>
+            <strong className="precio">Precio: ${total}</strong>
           </div>
-          <div className="contador">
-            <button className="signo" onClick={decrement}>-</button>
-            <span>{count} Día/as</span>
-            <button className="signo" onClick={increment}>+</button>
-          </div>
-          <p>Total: ${total}</p>
         </div>
       </div>
     </>

@@ -1,9 +1,8 @@
 .contenedorPelicula {
     display: flex;
     align-items: center;
-    justify-content: center; /* Añade esta línea para centrar horizontalmente */
-    height: 100vh; /* Ajusta la altura según tus necesidades */
-  
+    justify-content: center;
+    height: 100vh; 
   }
   
   .ImgPelicula {
@@ -11,6 +10,7 @@
     /* Estilos para la imagen de la película */
     /* Asegúrate de ajustar el tamaño, márgenes y otros estilos según tus necesidades */
     height: 100%;
+    margin: auto;
   }
   
   .detallePelicula {
@@ -18,17 +18,21 @@
     border-radius: 25px;
     color: white; /* Color del texto en el rectángulo rojo */
     padding: 10px; /* Espaciado interno para el texto */
-    margin-left: 10px; /* Espaciado entre la imagen y el texto */
     max-width: 400px;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    margin: auto;
   }
   
   .detallePelicula button{
     background-color: black;
-    padding: 10px;
+    margin: 10%;
     border-radius: 20px;
-    margin: auto;
 
   }
+  @media (max-width:800px) {
+    .contenedorPelicula {
+      display: flex;
+      height: 100vh; /* Ajusta la altura según tus necesidades */
+    
+    }
+  }  
